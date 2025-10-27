@@ -1,60 +1,31 @@
-/* Navigation */
-#navbar {
-    flex-direction: column;
-}
+/* Mobile-first overrides */
+/* This file is applied for screens <= 900px */
+:root{ --space:12px; }
 
-#navbar ul li a{
-    font-size: 1rem;
-    padding: 0px 7px;
-    padding-bottom: 8px;
-}
-/* Home section */
-#home{
-    height: 370px; 
-    padding: 3px 28px;
-}
+.header-inner{ padding:12px 0; }
+.brand-title{ display:none; }
+.main-nav{ display:none; }
 
-#home::before{
-    height: 480px; 
-}
+.hero{ padding:28px 0; }
+.hero-grid{ grid-template-columns: 1fr; gap:18px; }
+.hero-content h1{ font-size:1.6rem; }
+.lead{ font-size:0.98rem; }
+.media-img{ display:block; max-height:220px; object-fit:cover; }
 
-#home p{
-    font-size: 13px;
-}
+.cards{ grid-template-columns: 1fr; }
+.card-img{ height:160px; }
 
-/* Services section  */
-#services{
-    flex-direction: column;
-}
+.clients-grid img{ height:48px; }
 
-#services .box { 
-    padding: 14px;
-    margin: 2px 0px; 
-    margin-bottom: 20px;
-}
+.contact-form{ padding:14px; }
+.form-actions{ justify-content:center; }
+.form-row input, .form-row textarea{ font-size:0.96rem; }
 
-/* Clients section */
-#clients{
-    flex-wrap: wrap;
-}
+.footer-inner{ flex-direction:column; text-align:center; gap:8px; }
 
-#clients img{
-    width: 66px;
-    padding: 6px;
-    height: auto;
-}
-
-/* Contact us section */
-#contact-box form{
-    width:80%;
-}
-/* Footer */
-
-/* Utility classes */
-.h-primary{
-    font-size:26px;
-}
-.btn{
-    font-size: 13px;
-    padding: 4px 8px;
+/* Make header compact on small screens */
+@media (max-width:480px){
+  .brand-logo{ height:38px; }
+  .hero-content h1{ font-size:1.4rem; }
+  .hero-grid{ grid-template-columns: 1fr; }
 }
